@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core.views import *
+from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('upload/', UploadCSV.as_view(), name="upload_csv"),
     path('status/<str:request_id>', CheckStatus.as_view(), name="check_status"),
-    path('webhook/', WebhookHandlerView.as_view(), name='webhook_handler'),
+    path('webhook/', csrf_exempt(WebhookHandlerView.as_view()), name='webhook_handler'),
 ]

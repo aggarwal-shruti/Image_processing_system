@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-&jx+8m(ir#a=uaekrv#vaimftm99v%mgi&x^=g3=b79xo1q#0a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost',
+    '127.0.0.1',
+    '1222-2401-4900-1c74-3bc6-449f-51e2-7ef-2b44.ngrok-free.app',
+    '*',
+]
 
 
 # Application definition
@@ -136,5 +140,5 @@ CELERY_TIMEZONE = 'UTC'
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 CELERY_IMPORTS = ('core.tasks',)
 
-WEBHOOK_URL = "https://19a7-2401-4900-1c74-3bc6-449f-51e2-7ef-2b44.ngrok-free.app/webhook"
+WEBHOOK_URL = "https://1222-2401-4900-1c74-3bc6-449f-51e2-7ef-2b44.ngrok-free.app/webhook/"
 
